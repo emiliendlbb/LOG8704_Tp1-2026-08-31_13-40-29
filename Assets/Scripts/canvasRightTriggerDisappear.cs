@@ -1,8 +1,9 @@
+    
 using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(CanvasGroup))]
-public class canvasDisappearance : MonoBehaviour
+public class canvasRightTriggerDisappear : MonoBehaviour
 {
     [SerializeField] private float thumbstickThreshold = 0.1f;
     [SerializeField] private float fadeDuration = 1.0f;
@@ -18,9 +19,9 @@ public class canvasDisappearance : MonoBehaviour
     {
         if (hasTriggered) return;
 
-        bool leftStickMoved = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).magnitude > thumbstickThreshold;
+        bool rightStickMoved = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).magnitude > thumbstickThreshold;
 
-        if (leftStickMoved)
+        if (rightStickMoved)
         {
             hasTriggered = true;
             StartCoroutine(FadeOutAndHide());
