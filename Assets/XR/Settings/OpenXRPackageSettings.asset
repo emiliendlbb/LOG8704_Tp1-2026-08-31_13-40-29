@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee92377a8e0c873458b71a94a80f3394, type: 3}
   m_Name: ApiLayersFeature Standalone
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.ApiLayersFeature
-  m_enabled: 0
+  m_enabled: 1
   nameUi: API Layers
   version: 1.0.0
   featureIdInternal: com.unity.openxr.feature.apilayers
@@ -23,7 +23,16 @@ MonoBehaviour:
   required: 0
   customRuntimeLoaderName: 
   m_ApiLayers:
-    m_Collection: []
+    m_Collection:
+    - m_Json:
+        name: XR_APILAYER_METAX_operator
+        library_path: ./XrApiLayer_METAX_operator.dll
+        api_version: 1.1
+        implementation_version: 1
+        description: API layer that providing agentic interface for OpenXR
+      m_JsonFileName: XrApiLayer_METAX_operator.json
+      m_LibraryArchitecture: 1
+      m_IsEnabled: 1
 --- !u!114 &-8722453860890019731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f647cc0545697264a9878224faada6d5, type: 3}
   m_Name: MetaQuestFeature Android
   m_EditorClassIdentifier: Unity.XR.OpenXR.Features.MetaQuestSupport::UnityEngine.XR.OpenXR.Features.MetaQuestSupport.MetaQuestFeature
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Support
   version: 1.0.0
   featureIdInternal: com.unity.openxr.feature.metaquest
@@ -1440,7 +1449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6096094d69d82cc40947df806f66ab34, type: 3}
   m_Name: OpenXRCompositionLayersFeature Standalone
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.CompositionLayers.OpenXRCompositionLayersFeature
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Composition Layers Support
   version: 1.0.0
   featureIdInternal: com.unity.openxr.feature.compositionlayers
@@ -1637,7 +1646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b862ee14fb479fbfe5fffe655d3ed3, type: 3}
   m_Name: MetaQuestTouchProControllerProfile Android
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.MetaQuestTouchProControllerProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Touch Pro Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.metaquestpro
@@ -1815,7 +1824,11 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.OpenXRSettings
   features:
+  - {fileID: -911006014902357770}
+  - {fileID: -8822101358124756147}
+  - {fileID: 1764223592552089655}
   - {fileID: -2245191282523824589}
+  - {fileID: -2244571140568942653}
   - {fileID: 9220616862799276566}
   - {fileID: 4370369553373114012}
   - {fileID: -5364250133421827449}
@@ -1830,6 +1843,18 @@ MonoBehaviour:
   - {fileID: -4677475602537804082}
   - {fileID: 7213972207495651306}
   - {fileID: 7437029011900038393}
+  - {fileID: -2196417913688535461}
+  - {fileID: -5226934357913299224}
+  - {fileID: -3739607753294793747}
+  - {fileID: 2380786670065527875}
+  - {fileID: 5671728429239612565}
+  - {fileID: -1261676162151702467}
+  - {fileID: 6788816313755892739}
+  - {fileID: 2761149232763024963}
+  - {fileID: -5263502336662043935}
+  - {fileID: -56715152616063824}
+  - {fileID: 5096558840955801772}
+  - {fileID: 7857627680413725326}
   - {fileID: 4205984351025875235}
   - {fileID: -679062540625399189}
   - {fileID: -2668963342822736564}
@@ -1838,28 +1863,12 @@ MonoBehaviour:
   - {fileID: 3076263203568066591}
   - {fileID: -1330806848531405871}
   - {fileID: 6681731180168168772}
+  - {fileID: -8690228828614092057}
   - {fileID: 8929197045607826989}
   - {fileID: 8857231119013268719}
   - {fileID: -8508883126322256561}
   - {fileID: -878294082826992045}
   - {fileID: 590815445133385948}
-  - {fileID: -8822101358124756147}
-  - {fileID: -2244571140568942653}
-  - {fileID: -8690228828614092057}
-  - {fileID: 1764223592552089655}
-  - {fileID: -56715152616063824}
-  - {fileID: 5096558840955801772}
-  - {fileID: 2380786670065527875}
-  - {fileID: 5671728429239612565}
-  - {fileID: -2196417913688535461}
-  - {fileID: 6788816313755892739}
-  - {fileID: -3739607753294793747}
-  - {fileID: -5226934357913299224}
-  - {fileID: -911006014902357770}
-  - {fileID: -5263502336662043935}
-  - {fileID: 7857627680413725326}
-  - {fileID: -1261676162151702467}
-  - {fileID: 2761149232763024963}
   customLoaderName: 
   m_renderMode: 1
   m_latencyOptimization: 0
