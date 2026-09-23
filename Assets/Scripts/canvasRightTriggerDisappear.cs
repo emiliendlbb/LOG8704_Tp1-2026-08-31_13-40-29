@@ -18,10 +18,10 @@ public class canvasRightTriggerDisappear : MonoBehaviour
     private void Update()
     {
         if (hasTriggered) return;
+        
+        bool rightTriggerPressed = OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger);
 
-        bool rightStickMoved = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).magnitude > thumbstickThreshold;
-
-        if (rightStickMoved)
+        if (rightTriggerPressed)
         {
             hasTriggered = true;
             StartCoroutine(FadeOutAndHide());
