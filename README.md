@@ -55,3 +55,6 @@ Le Meta XR Simulator n’a toutefois pas fonctionné sur tous les ordinateurs de
 ## Conditions de test
 
 Les tests sur le Meta Quest 3 ont été réalisés dans une salle de laboratoire. L’espace physique disponible étant limité par la présence de plusieurs postes de travail, les déplacements physiques peuvent être restreints dans cet environnement.
+
+## Vidéos de présentations
+Une vidéo sur casque et une vidéo sur simulation sous le repertoire "Vidéos" depuis la racine du répertoire github.
